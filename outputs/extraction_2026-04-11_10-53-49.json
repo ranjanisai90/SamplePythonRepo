@@ -1,0 +1,120 @@
+{
+  "files": {
+    "C:\\Users\\SrSa374\\OneDrive - HP Inc\\Contextualization\\GITRepo_Agents\\AST\\Sample_PythonRepo\\conftest.py": {
+      "imports": [
+        {
+          "module": "utils.driver_factory",
+          "name": "get_driver"
+        }
+      ],
+      "tests": [],
+      "fixtures": [
+        "driver"
+      ],
+      "page_objects": {}
+    },
+    "C:\\Users\\SrSa374\\OneDrive - HP Inc\\Contextualization\\GITRepo_Agents\\AST\\Sample_PythonRepo\\locators\\login_locators.py": {
+      "imports": [
+        {
+          "module": "selenium.webdriver.common.by",
+          "name": "By"
+        }
+      ],
+      "tests": [],
+      "fixtures": [],
+      "page_objects": {
+        "LoginLocators": {
+          "methods": []
+        }
+      }
+    },
+    "C:\\Users\\SrSa374\\OneDrive - HP Inc\\Contextualization\\GITRepo_Agents\\AST\\Sample_PythonRepo\\pages\\login_page.py": {
+      "imports": [
+        {
+          "module": "selenium.webdriver.common.by",
+          "name": "By"
+        },
+        {
+          "module": "locators.login_locators",
+          "name": "LoginLocators"
+        }
+      ],
+      "tests": [],
+      "fixtures": [],
+      "page_objects": {
+        "LoginPage": {
+          "methods": [
+            "__init__",
+            "enter_username",
+            "enter_password",
+            "click_login"
+          ]
+        }
+      }
+    },
+    "C:\\Users\\SrSa374\\OneDrive - HP Inc\\Contextualization\\GITRepo_Agents\\AST\\Sample_PythonRepo\\tests\\test_login.py": {
+      "imports": [
+        {
+          "module": "pages.login_page",
+          "name": "LoginPage"
+        }
+      ],
+      "tests": [
+        {
+          "name": "test_valid_login",
+          "steps": [],
+          "assertions": [
+            "\"Dashboard\" in driver.title"
+          ],
+          "uses": []
+        }
+      ],
+      "fixtures": [],
+      "page_objects": {}
+    },
+    "C:\\Users\\SrSa374\\OneDrive - HP Inc\\Contextualization\\GITRepo_Agents\\AST\\Sample_PythonRepo\\utils\\driver_factory.py": {
+      "imports": [
+        {
+          "module": "selenium",
+          "name": "webdriver"
+        }
+      ],
+      "tests": [],
+      "fixtures": [],
+      "page_objects": {}
+    }
+  },
+  "tests": [
+    {
+      "name": "test_valid_login",
+      "steps": [],
+      "assertions": [
+        "\"Dashboard\" in driver.title"
+      ],
+      "uses": []
+    }
+  ],
+  "fixtures": [
+    "driver"
+  ],
+  "page_objects": {
+    "LoginLocators": {
+      "methods": []
+    },
+    "LoginPage": {
+      "methods": [
+        "__init__",
+        "enter_username",
+        "enter_password",
+        "click_login"
+      ]
+    }
+  },
+  "relationships": [
+    {
+      "test": "test_valid_login",
+      "type": "asserts",
+      "value": "\"Dashboard\" in driver.title"
+    }
+  ]
+}
